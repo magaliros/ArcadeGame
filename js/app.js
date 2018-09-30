@@ -62,7 +62,9 @@ Player.prototype.render = function() {
 Player.prototype.update = function(dt) {
     if (game && player.y < 40) {
         game = false;
-        won();
+        setTimeout(() => {
+            alert('You won!');
+        }, 250) 
     }
 
 };
