@@ -60,7 +60,7 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.update = function(dt) {
-    if (game && player.y < 40) {
+    if (game && this.y < 40) {
         game = false;
         setTimeout(() => {
             alert('You won!');
@@ -79,7 +79,7 @@ Player.prototype.handleInput = function(direction) {
         this.x += horizontal;
     } else if (direction === 'down' && this.y + vertical < ctx.canvas.height - 200) {
         this.y += vertical;
-    } else if (direction === 'up' && this.y - vertical > (0 - player.height)) {
+    } else if (direction === 'up' && this.y - vertical > (0 - this.height)) {
         this.y -= vertical;
     }
 }
